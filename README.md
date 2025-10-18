@@ -33,15 +33,16 @@ It automatically runs tests, scans for vulnerabilities, builds a Docker image, a
 
 ```mermaid
 graph TD
-A[Developer Commit Code] --> B[GitHub Actions Trigger]
-B --> C[Run Unit Tests with Pytest]
-C --> D[Run Bandit (Static Security Scan)]
-D --> E[Run Safety (Dependency Vulnerability Scan)]
-E --> F[Run CodeQL (Advanced Static Analysis)]
-F --> G[Run OWASP Dependency Check]
-G --> H[Build Docker Image]
-H --> I[Deploy to Render Cloud]
-I --> J[Slack Notification]
+    A[Developer Commit Code] --> B[GitHub Actions Trigger]
+    B --> C[Run Unit Tests with Pytest]
+    C --> D[Run Bandit (Static Security Scan)]
+    D --> E[Run Safety (Dependency Vulnerability Scan)]
+    E --> F[Run CodeQL (Advanced Static Analysis)]
+    F --> G[Run OWASP Dependency Check]
+    G --> H[Build Docker Image]
+    H --> I[Deploy to Render Cloud]
+    I --> J[Slack Notification]
+
 
 
 🔒 Security Automation Highlights
