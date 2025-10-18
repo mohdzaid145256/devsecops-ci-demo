@@ -1,35 +1,37 @@
-# 🚀 DevSecOps CI/CD Demo — Secure Flask Application
+# 🚀 DevSecOps CI/CD Demo — Secure Flask Application  
 
-A **complete DevSecOps pipeline project** integrating:  
-✅ Continuous Integration (CI)  
-✅ Security Scanning  
-✅ Dockerized Deployment  
-✅ Cloud Hosting (Render)  
-✅ Slack Notifications  
-
----
-
-## 🌐 Live Demo  
-**Render Deployment:** [https://your-render-app-url.onrender.com](https://your-render-app-url.onrender.com)
+A complete **DevSecOps Pipeline Project** integrating:  
+✅ **Continuous Integration (CI)**  
+✅ **Security Scanning (SAST + DAST)**  
+✅ **Dockerized Deployment**  
+✅ **Cloud Hosting (Render)**  
+✅ **Slack Notifications**  
 
 ---
 
-## 🧱 Project Overview
-This project demonstrates a **secure end-to-end CI/CD pipeline** built around a Flask web app.  
-It automatically runs tests, scans for vulnerabilities, builds a Docker image, and deploys securely to the cloud.  
+## 🌍 Live Render Deployment  
+🔗 [View Live App](https://your-render-app-url.onrender.com)  
+*(Replace with your actual Render URL — currently shows “Welcome to the DevSecOps CI/CD Demo App!”)*  
 
-**Tech Stack**
+---
+
+## 📘 Project Overview  
+
+This project demonstrates a **secure end-to-end CI/CD pipeline** for a Python Flask web app.  
+The pipeline automatically runs tests, performs security scans, builds a Docker image, and deploys securely to Render.  
+
+**Tech Stack:**  
 - **Language:** Python (Flask)  
 - **Testing:** Pytest  
 - **CI/CD:** GitHub Actions  
 - **Security:** Bandit, Safety, CodeQL, OWASP Dependency Check  
 - **Containerization:** Docker  
-- **Deployment:** Render (Cloud)  
+- **Deployment:** Render Cloud  
 - **Notifications:** Slack  
 
 ---
 
-## 🧩 CI/CD Pipeline Overview
+## 🧩 CI/CD Pipeline Overview  
 
 ```mermaid
 graph TD
@@ -42,7 +44,6 @@ graph TD
     G --> H[Build Docker Image]
     H --> I[Deploy to Render Cloud]
     I --> J[Slack Notification]
-
 
 
 
