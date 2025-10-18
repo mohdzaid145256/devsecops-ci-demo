@@ -1,34 +1,41 @@
-🚀 DevSecOps CI/CD Demo — Secure Flask Application
+# 🚀 DevSecOps CI/CD Demo — Secure Flask Application
 
+A **complete DevSecOps pipeline project** integrating:  
+✅ Continuous Integration (CI)  
+✅ Security Scanning  
+✅ Dockerized Deployment  
+✅ Cloud Hosting (Render)  
+✅ Slack Notifications  
 
+---
 
-A complete DevSecOps Pipeline Project integrating:
-✅ Continuous Integration (CI)
-✅ Security Scanning
-✅ Dockerized Deployment
-✅ Cloud Hosting (Render)
-✅ Slack Notifications
+## 🌐 Live Demo  
+**Render Deployment:** [https://your-render-app-url.onrender.com](https://your-render-app-url.onrender.com)
 
-🌐 Live Demo
-Render Deployment: [https://your-render-app-url.onrender.com](https://devsecops-demo-hm0g.onrender.com)
+---
 
+## 🧱 Project Overview
+This project demonstrates a **secure end-to-end CI/CD pipeline** built around a Flask web app.  
+It automatically runs tests, scans for vulnerabilities, builds a Docker image, and deploys securely to the cloud.  
 
-🧱 Project Overview
-This project demonstrates a secure end-to-end CI/CD pipeline built around a Flask web app. It automatically runs tests, scans for vulnerabilities, builds a Docker image, and deploys securely to the cloud.
-Tech Stack:
-Language: Python (Flask)
-Testing: Pytest
-CI/CD: GitHub Actions
-Security: Bandit, Safety, CodeQL, OWASP Dependency Check
-Containerization: Docker
-Deployment: Render
-Notifications: Slack
+**Tech Stack**
+- **Language:** Python (Flask)  
+- **Testing:** Pytest  
+- **CI/CD:** GitHub Actions  
+- **Security:** Bandit, Safety, CodeQL, OWASP Dependency Check  
+- **Containerization:** Docker  
+- **Deployment:** Render (Cloud)  
+- **Notifications:** Slack  
 
-🧪 CI/CD Pipeline Overview
+---
+
+## 🧩 CI/CD Pipeline Overview
+
+```mermaid
 graph TD
 A[Developer Commit Code] --> B[GitHub Actions Trigger]
 B --> C[Run Unit Tests with Pytest]
-C --> D[Run Bandit (Static Security Analysis)]
+C --> D[Run Bandit (Static Security Scan)]
 D --> E[Run Safety (Dependency Vulnerability Scan)]
 E --> F[Run CodeQL (Advanced Static Analysis)]
 F --> G[Run OWASP Dependency Check]
@@ -36,69 +43,58 @@ G --> H[Build Docker Image]
 H --> I[Deploy to Render Cloud]
 I --> J[Slack Notification]
 
-🔐 Security Automation Highlights
-Tool	Purpose	Automation
-Bandit	Static code analysis for Python	Runs on each push
-Safety	Dependency vulnerability scanner	Checks requirements.txt
-CodeQL	GitHub’s SAST tool for code vulnerabilities	Auto-runs weekly + on push
-OWASP Dependency Check	CVE detection for libraries	Runs via GitHub Actions
-Slack Webhook	Notification integration	Alerts on success/failure
-Trivy (optional)	Container image vulnerability scan	Can be added in Docker stage
+
+🔒 Security Automation Highlights
+Tool	Purpose	Trigger
+Bandit	Static code analysis for Python	On every push
+Safety	Dependency vulnerability scanner	On every push
+CodeQL	GitHub’s SAST (Advanced Analysis)	On push + weekly
+OWASP Dependency Check	CVE detection for libraries	On push
+Slack Notifications	Alerts on CI success/failure	Optional
+Trivy (optional)	Container image vulnerability scan	Docker stage
 
 ⚙️ Setup Instructions
-1️⃣ Clone and Setup
+1️⃣ Clone Repository
 git clone https://github.com/mohdzaid145256/devsecops-ci-demo.git
 cd devsecops-ci-demo
+2️⃣ Setup Virtual Environment
 python -m venv venv
-source venv/bin/activate   # or .\venv\Scripts\activate (Windows)
+source venv/bin/activate   # For Mac/Linux
+venv\Scripts\activate      # For Windows
 pip install -r requirements.txt
-2️⃣ Run Locally
+3️⃣ Run Flask App Locally
 python app/main.py
-Visit http://127.0.0.1:5000/ in your browser.
-3️⃣ Run Tests
+# Visit http://127.0.0.1:5000/ in browser
+4️⃣ Run Tests & Security Scans
 pytest -v
-4️⃣ Run Security Scans
 bandit -r app/
 safety check -r requirements.txt
 
-☁️ Deployment
-🐳 Docker
+🐳 Deployment (Docker Optional)
 docker build -t devsecops-demo .
 docker run -p 5000:5000 devsecops-demo
 
-🌩 Render
-Connect your GitHub repository on Render
+☁️ Render Deployment Steps
+Connect your GitHub repo to Render
 Choose “Auto Deploy on Push”
 Select Python + Docker runtime
-Deploy and verify the live URL
+Verify via the live Render URL
 
-📣 Notifications
+🔔 Slack Notifications
 Slack notifications are automatically sent via the CI pipeline whenever:
 ✅ Build/Test passes
-❌ Pipeline fails
-Webhook: stored securely as SLACK_WEBHOOK_URL in GitHub → Secrets → Actions
+❌ Build/Test fails
+🔒 Security scans complete
 
-🧠 Bonus Integrations
-✅ CodeQL Analysis — static vulnerability scanning
-✅ OWASP Dependency Check — dependency-level security audit
-✅ Slack Webhook Notifications — CI visibility
-✅ Render Auto-Deployment — cloud hosting
-🔜 Trivy Container Scan (optional for Docker image)
+🏆 Bonus Features (Recruiter Highlights)
+Automated CodeQL security analysis
+Integration-ready Slack alerts for DevSecOps visibility
+Dockerfile for container portability
+End-to-end CI/CD pipeline with testing + security + deployment
+Production-ready structure deployable to AWS Elastic Beanstalk if scaled
 
-🏁 Results Summary
-Stage	Tool	Status
-Testing	Pytest	✅ Passed
-Static Analysis	Bandit	✅ Passed
-Dependency Scan	Safety	✅ Clean
-CodeQL Scan	GitHub	✅ Passed
-OWASP Dependency Check	Action	✅ No Critical Issues
-Deployment	Render	✅ Live
-Notification	Slack	✅ Functional
+📜 License
+This project is for educational and DevSecOps demonstration purposes only.
 
-👨‍💻 Author
-Mohd Zaid
+Maintainer: Mohd Zaid
 📧 mohdzaid4919@gmail.com
-🔗 GitHub Profile
-📍 Sikar, Rajasthan, India
-🏆 Acknowledgments
-This project was created as part of a DevSecOps Assessment Task to demonstrate secure CI/CD automation pipelines using open-source tools and cloud deployment strategies.
