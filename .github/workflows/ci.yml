@@ -1,3 +1,13 @@
+    - name: Run Dependency Vulnerability Scan (Safety)
+      run: |
+        echo "Running dependency vulnerability scan with Safety..."
+        safety scan -r requirements.txt --output text --save-json safety_report.json || true
+
+    - name: Upload Safety Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: safety-dependency-report
+        path: safety_report.json
 name: DevSecOps CI Pipeline
 
 on:
