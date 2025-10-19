@@ -47,30 +47,35 @@ graph TD
     I --> J["Slack Notification"]
 ```
 
+## 🔒 Security Automation Highlights
 
+| Tool | Purpose | Trigger |
+|------|----------|----------|
+| **Bandit** | Static code analysis for Python | On every push |
+| **Safety** | Dependency vulnerability scanner | On every push |
+| **CodeQL** | GitHub’s SAST (Advanced Analysis) | On push + weekly |
+| **OWASP Dependency Check** | CVE detection for libraries | On push |
+| **Slack Notifications** | Alerts on CI success/failure | Optional |
+| **Trivy (Optional)** | Container image vulnerability scan | Docker stage |
 
+---
 
-🔒 Security Automation Highlights
-Tool	Purpose	Trigger
-Bandit	Static code analysis for Python	On every push
-Safety	Dependency vulnerability scanner	On every push
-CodeQL	GitHub’s SAST (Advanced Analysis)	On push + weekly
-OWASP Dependency Check	CVE detection for libraries	On push
-Slack Notifications	Alerts on CI success/failure	Optional
-Trivy (optional)	Container image vulnerability scan	Docker stage
+## ⚙️ Setup Instructions
 
-⚙️ Setup Instructions
-1️⃣ Clone Repository
+### 1️⃣ Clone Repository
+```bash
 git clone https://github.com/mohdzaid145256/devsecops-ci-demo.git
 cd devsecops-ci-demo
+
 2️⃣ Setup Virtual Environment
 python -m venv venv
-source venv/bin/activate   # For Mac/Linux
-venv\Scripts\activate      # For Windows
+source venv/bin/activate   
 pip install -r requirements.txt
+
 3️⃣ Run Flask App Locally
 python app/main.py
-# Visit http://127.0.0.1:5000/ in browser
+Visit: http://127.0.0.1:5000/
+
 4️⃣ Run Tests & Security Scans
 pytest -v
 bandit -r app/
@@ -84,23 +89,26 @@ docker run -p 5000:5000 devsecops-demo
 Connect your GitHub repo to Render
 Choose “Auto Deploy on Push”
 Select Python + Docker runtime
-Verify via the live Render URL
+Verify via your live Render URL
 
 🔔 Slack Notifications
-Slack notifications are automatically sent via the CI pipeline whenever:
+Slack alerts are automatically sent via the CI pipeline whenever:
 ✅ Build/Test passes
 ❌ Build/Test fails
 🔒 Security scans complete
 
-🏆 Bonus Features (Recruiter Highlights)
+🏆 Bonus (Recruiter Highlights)
 Automated CodeQL security analysis
-Integration-ready Slack alerts for DevSecOps visibility
+Integration-ready Slack alerts for visibility
+End-to-end CI/CD with testing + security + deployment
 Dockerfile for container portability
-End-to-end CI/CD pipeline with testing + security + deployment
-Production-ready structure deployable to AWS Elastic Beanstalk if scaled
+Production-ready structure deployable to AWS or Render
 
-📜 License
+🪶 License
 This project is for educational and DevSecOps demonstration purposes only.
 
 Maintainer: Mohd Zaid
 📧 mohdzaid4919@gmail.com
+
+
+
