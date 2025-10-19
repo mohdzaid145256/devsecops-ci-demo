@@ -97,6 +97,20 @@ Slack alerts are automatically sent via the CI pipeline whenever:
 ❌ Build/Test fails
 🔒 Security scans complete
 
+🤖 AI-Assisted Learning & Reflection
+
+This project was built as part of a DevSecOps CI/CD learning and implementation task.
+Throughout the development, I explored various aspects of secure automation, including continuous integration, testing, and vulnerability scanning.
+
+I used ChatGPT as an AI learning assistant to understand best practices, debug issues, and accelerate setup of modern security tools like:
+Bandit for static code analysis
+Safety for dependency vulnerability scanning
+CodeQL for advanced code security
+Slack Notifications for CI alerts
+Render Deployment for automated hosting
+
+By combining my own implementation efforts with AI-guided learning, I gained practical knowledge of secure software delivery pipelines and DevSecOps automation — improving both my technical understanding and real-world deployment experience
+
 🏆 Bonus (Recruiter Highlights)
 Automated CodeQL security analysis
 Integration-ready Slack alerts for visibility
