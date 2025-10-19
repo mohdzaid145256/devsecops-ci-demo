@@ -48,6 +48,7 @@ graph TD
 
 
 
+
 🔒 Security Automation Highlights
 Tool	Purpose	Trigger
 Bandit	Static code analysis for Python	On every push
