@@ -8,9 +8,9 @@ A complete **DevSecOps Pipeline Project** integrating:
 ✅ **Slack Notifications**  
 
 ---
-
 ## 🌍 Live Render Deployment  
-🔗 [View Live App][https://devsecops-demo-hm0g.onrender.com] 
+🔗 [**View Live App**](https://devsecops-demo-hm0g.onrender.com)
+
   
 
 ---
