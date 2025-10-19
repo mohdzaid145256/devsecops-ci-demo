@@ -30,8 +30,7 @@ The pipeline automatically runs tests, performs security scans, builds a Docker 
 - **Notifications:** Slack  
 
 ---
-
-## 🧩 CI/CD Pipeline Overview  
+### 🧩 CI/CD Pipeline Overview
 
 ```mermaid
 graph TD
@@ -44,6 +43,8 @@ graph TD
     G --> H[Build Docker Image]
     H --> I[Deploy to Render Cloud]
     I --> J[Slack Notification]
+```
+
 
 
 
