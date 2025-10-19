@@ -10,8 +10,8 @@ A complete **DevSecOps Pipeline Project** integrating:
 ---
 
 ## 🌍 Live Render Deployment  
-🔗 [View Live App](https://your-render-app-url.onrender.com)  
-*(Replace with your actual Render URL — currently shows “Welcome to the DevSecOps CI/CD Demo App!”)*  
+🔗 [View Live App]https://devsecops-demo-hm0g.onrender.com 
+  
 
 ---
 
